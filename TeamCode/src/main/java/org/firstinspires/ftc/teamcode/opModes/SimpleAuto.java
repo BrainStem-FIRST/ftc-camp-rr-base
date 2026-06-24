@@ -7,7 +7,7 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import org.firstinspires.ftc.teamcode.util.AutoCommands;
 import org.firstinspires.ftc.teamcode.BrainSTEMRobot;
 
-@Autonomous (name = "Auto")
+@Autonomous (name = "Simple Auto")
 public class SimpleAuto extends LinearOpMode {
 
     private BrainSTEMRobot robot;

@@ -11,7 +11,7 @@ import org.firstinspires.ftc.teamcode.roadrunner.MecanumDrive;
 import org.firstinspires.ftc.teamcode.util.AutoCommands;
 import org.firstinspires.ftc.teamcode.util.DriveToPoint;
 
-@Autonomous (name = "Auto")
+@Autonomous (name = "Pinpoint Auto")
 public class PinpointAuto extends LinearOpMode {
 
     private BrainSTEMRobot robot;
