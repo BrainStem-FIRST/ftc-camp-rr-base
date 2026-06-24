@@ -1,18 +1,16 @@
-package org.firstinspires.ftc.teamcode;
+package org.firstinspires.ftc.teamcode.opModes;
 
-import com.acmerobotics.roadrunner.ParallelAction;
-import com.acmerobotics.roadrunner.Pose2d;
 import com.acmerobotics.roadrunner.SequentialAction;
 import com.acmerobotics.roadrunner.ftc.Actions;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-import com.qualcomm.robotcore.util.ElapsedTime;
+import org.firstinspires.ftc.teamcode.util.AutoCommands;
+import org.firstinspires.ftc.teamcode.BrainSTEMRobot;
 
 @Autonomous (name = "Auto")
-public class Auto extends LinearOpMode {
+public class SimpleAuto extends LinearOpMode {
 
     private BrainSTEMRobot robot;
-    private ElapsedTime runtime = new ElapsedTime();
 
     @Override
     public void runOpMode() throws InterruptedException {

@@ -1,0 +1,38 @@
+package org.firstinspires.ftc.teamcode.opModes;
+
+import com.acmerobotics.roadrunner.Pose2d;
+import com.acmerobotics.roadrunner.SequentialAction;
+import com.acmerobotics.roadrunner.Vector2d;
+import com.acmerobotics.roadrunner.ftc.Actions;
+import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import org.firstinspires.ftc.teamcode.BrainSTEMRobot;
+import org.firstinspires.ftc.teamcode.roadrunner.MecanumDrive;
+import org.firstinspires.ftc.teamcode.util.AutoCommands;
+import org.firstinspires.ftc.teamcode.util.DriveToPoint;
+
+@Autonomous (name = "Auto")
+public class PinpointAuto extends LinearOpMode {
+
+    private BrainSTEMRobot robot;
+    private MecanumDrive drive;
+    private AutoCommands autoCommands;
+    private Pose2d startPose = new Pose2d(new Vector2d(0, 0), Math.toRadians(0));
+
+    @Override
+    public void runOpMode() throws InterruptedException {
+
+        robot = new BrainSTEMRobot(hardwareMap, telemetry, this);
+        drive = new MecanumDrive(hardwareMap, startPose);
+        autoCommands = new AutoCommands(robot, telemetry);
+
+        waitForStart();
+
+        Actions.runBlocking(
+            new SequentialAction(
+                new DriveToPoint(drive, telemetry, 12, 12, Math.toRadians(90)),
+                new DriveToPoint(drive, telemetry, -12, 12, Math.toRadians(180))
+            )
+        );
+    }
+}

@@ -1,10 +1,11 @@
-package org.firstinspires.ftc.teamcode;
+package org.firstinspires.ftc.teamcode.opModes;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import org.firstinspires.ftc.teamcode.BrainSTEMRobot;
 
 @TeleOp (name = "TeleOp")
-public class Tele extends LinearOpMode {
+public class Teleop extends LinearOpMode {
 
     private BrainSTEMRobot robot;
 
